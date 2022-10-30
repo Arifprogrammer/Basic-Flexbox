@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 98vh;
+        }
+        main{
+            Height: 70vh;
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            /* overflow: hidden; */
+            }
+        .left{
+            display: flex;
+            flex-basis: 100%;
+            flex-direction: column;
+            flex-wrap: wrap; 
+        }
+        .item{
+            flex-grow: 1;
+            margin: 2px;
+        }
+        .right{
+            display: flex;
+            flex-basis: 100%;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        h1{
+            text-align: center;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        @media (min-width: 768px) {
+            .left{
+                flex-direction: row;
+                flex-basis: 60%;
+            }
+/* ----------------------------Flexbox-এর CSS এ দুটা item একসাতে না ধরে আলাদা আলাদাভাবে ধরলে ঠিকভাবে কাজ করবে------------------------------- */
+            .a{
+                flex-basis: 49%;
+                height: 70%;
+                order: 3; 
+            }
+/* ----------------------------Flexbox-এর CSS এ দুটা item একসাতে না ধরে আলাদা আলাদাভাবে ধরলে ঠিকভাবে কাজ করবে------------------------------- */
+            .b{
+                flex-basis: 49%;
+                height: 70%;
+                order: 2; 
+            }
+            .c{
+                flex-basis: 100%;
+                height: 28.8%;
+                order: 1;    
+            }
+            .right{
+                flex-basis: 40%;
+            }
+            .c:hover .c{
+                height: 38.8%;
+            }
+            /* .c:hover .a{
+                height: 60%;
+            }
+            .c:hover .b{
+                height: 60%;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <Section>
+        <main>
+            <div class="left">
+                <div style="background-color: rgb(21, 163, 132);" class="item a"><h1>1</h1></div>
+                <div style="background-color: rgb(25, 241, 241);" class="item b"><h1>2</h1></div>
+                <div style="background-color: rgb(20, 95, 165);" class="item c"><h1>3</h1></div>
+            </div>
+            <div class="right">
+                <div style="background-color: rgb(179, 54, 131);" class="item d"><h1>4</h1></div>
+            </div>
+        </main>
+    </Section>
+</body>
+</html>
