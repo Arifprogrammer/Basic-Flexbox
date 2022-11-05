@@ -51,28 +51,39 @@
             .a{
                 flex-basis: 49%;
                 height: 70%;
-                order: 3; 
+/* --------------------niche order use korar karon hocche div gula k narachora kora----------------
+                order: 3;  */
             }
             .b{
                 flex-basis: 49%;
                 height: 70%;
-                order: 2; 
+/* --------------------niche order use korar karon hocche div gula k narachora kora----------------
+                order: 2;  */
             }
             .c{
                 flex-basis: 100%;
                 height: 28.8%;
-                order: 1;    
+/* --------------------niche order use korar karon hocche div gula k narachora kora----------------
+                order: 1;     */
             }
             .right{
                 flex-basis: 40%;
             }
-            .c:hover .c{
+            .c:hover{
                 height: 38.8%;
             }
-            .c:hover .a{
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+ekta parent diver chid div k hover kore other child div gulate change korte chaile j div k hover kora hobe 
+oi div k html a parent div er first child hote hobe then nicher moto "~" ei symbol use kore div gula k dhorte hobe
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+            .c:hover ~ .b{
                 height: 60%;
             }
-            .c:hover .b{
+            .c:hover ~ .a{
                 height: 60%;
             }
         }
@@ -82,9 +93,9 @@
     <Section>
         <main>
             <div class="left">
-                <div style="background-color: rgb(21, 163, 132);" class="item a"><h1>1</h1></div>
+                <div style="background-color: rgb(21, 163, 132);" class="item c"><h1>1</h1></div>
                 <div style="background-color: rgb(25, 241, 241);" class="item b"><h1>2</h1></div>
-                <div style="background-color: rgb(20, 95, 165);" class="item c"><h1>3</h1></div>
+                <div style="background-color: rgb(20, 95, 165);" class="item a"><h1>3</h1></div>
             </div>
             <div class="right">
                 <div style="background-color: rgb(179, 54, 131);" class="item d"><h1>4</h1></div>
